@@ -69,18 +69,18 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-4 py-24 md:py-36 relative z-10">
         <div className="max-w-3xl" key={fadeKey}>
-          <p className="text-accent font-semibold tracking-wide uppercase text-sm mb-4 animate-fade-up">
+          <p className="text-primary-foreground font-semibold tracking-wide uppercase text-sm mb-4 animate-fade-up drop-shadow-md">
             {slide.tag}
           </p>
           <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-up"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-up drop-shadow-lg"
             style={{ animationDelay: "0.1s" }}
           >
             {slide.heading}{" "}
-            <span className="text-accent">{slide.accent}</span>
+            <span className="text-primary-foreground font-extrabold">{slide.accent}</span>
           </h1>
           <p
-            className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl animate-fade-up"
+            className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-2xl animate-fade-up drop-shadow-md"
             style={{ animationDelay: "0.2s" }}
           >
             {slide.subheading}
