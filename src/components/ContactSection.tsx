@@ -20,15 +20,11 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-background">
       <div ref={ref} className="container mx-auto px-4 opacity-0">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
-          Contact Us
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">Contact Us</h2>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div>
-            <h3 className="text-xl font-semibold text-primary mb-6">
-              Motion Technology Autoparts Trading FZE
-            </h3>
+            <h3 className="text-xl font-semibold text-primary mb-6">Motion Technology Autoparts Trading FZE</h3>
             <p className="text-muted-foreground mb-1">FC0401WS84,</p>
             <p className="text-muted-foreground mb-1">Jebel Ali Free Zone Authority (JAFZA)</p>
             <p className="text-muted-foreground mb-6">Dubai, United Arab Emirates</p>
@@ -48,7 +44,7 @@ const ContactSection = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-accent" />
-                <span className="text-muted-foreground">Sun – Thu | 9:00 AM – 6:00 PM</span>
+                <span className="text-muted-foreground">Mon – Fri | 9:00 AM – 6:00 PM</span>
               </div>
             </div>
           </div>
