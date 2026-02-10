@@ -4,10 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const ContactSection = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const ref = useScrollReveal();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,13 +19,12 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+      <div ref={ref} className="container mx-auto px-4 opacity-0">
         <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
           Contact Us
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Info */}
           <div>
             <h3 className="text-xl font-semibold text-primary mb-6">
               Motion Technology Autoparts Trading
@@ -46,7 +47,6 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input
               placeholder="Your Name"

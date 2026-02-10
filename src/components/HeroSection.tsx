@@ -1,9 +1,14 @@
 import { Button } from "@/components/ui/button";
+import heroBg from "@/assets/hero-bearings.jpg";
 
 const HeroSection = () => (
-  <section className="relative bg-primary text-primary-foreground overflow-hidden">
-    {/* Subtle pattern overlay */}
-    <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)", backgroundSize: "40px 40px" }} />
+  <section className="relative bg-primary text-primary-foreground overflow-hidden min-h-[520px] flex items-center">
+    {/* Background image */}
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{ backgroundImage: `url(${heroBg})` }}
+    />
+    <div className="absolute inset-0 bg-primary/80" />
 
     <div className="container mx-auto px-4 py-24 md:py-36 relative z-10">
       <div className="max-w-3xl">
