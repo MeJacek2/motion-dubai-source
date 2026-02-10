@@ -30,9 +30,9 @@ const BrandsSection = () => {
           {brands.map((b) => (
             <div
               key={b.name}
-              className="flex flex-col items-center justify-center p-8 rounded-lg border bg-white hover:shadow-md transition-shadow"
+              className="flex flex-col items-center justify-center p-4 rounded-lg border bg-white hover:shadow-md transition-shadow"
             >
-              <div className="h-16 w-32 flex items-center justify-center mb-3">
+              <div className="h-20 w-40 flex items-center justify-center mb-2">
                 <img src={b.logo} alt={`${b.name} logo`} className="max-h-full max-w-full object-contain" />
               </div>
               <span className="text-xs text-muted-foreground">{b.origin}</span>
