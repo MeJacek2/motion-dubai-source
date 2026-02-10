@@ -2,7 +2,7 @@ import { Building2, ShieldCheck, Globe, Users } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const features = [
-  { icon: Building2, title: "Dubai-based FZE", desc: "Trading company operating from Dubai's strategic hub" },
+  { icon: Building2, title: "DAFZA Dubai Based", desc: "Trading company operating from Dubai's strategic hub" },
   { icon: ShieldCheck, title: "Quality & Authenticity", desc: "Focus on genuine, high-quality components" },
   { icon: Globe, title: "Global Sourcing", desc: "Partnerships with manufacturers across Japan & China" },
   { icon: Users, title: "B2B Built", desc: "Designed for trade, industrial & distribution customers" },
