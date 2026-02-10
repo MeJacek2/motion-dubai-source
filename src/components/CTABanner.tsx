@@ -21,7 +21,7 @@ const CTABanner = () => (
           asChild
           size="lg"
           variant="outline"
-          className="border-accent-foreground/30 text-accent-foreground hover:bg-accent-foreground/10 px-8"
+          className="border-primary text-primary bg-white hover:bg-primary hover:text-primary-foreground px-8"
         >
           <a href="#contact">Contact Sales</a>
         </Button>
