@@ -27,7 +27,7 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div>
             <h3 className="text-xl font-semibold text-primary mb-6">
-              Motion Technology Autoparts Trading
+              Motion Technology Autoparts Trading FZE
             </h3>
             <p className="text-muted-foreground mb-1">FC0401WS84,</p>
             <p className="text-muted-foreground mb-1">Jebel Ali Free Zone Authority (JAFZA)</p>

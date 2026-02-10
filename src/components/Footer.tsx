@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <img src={logo} alt="Motion Technology" className="h-10 brightness-0 invert" />
         <p className="text-sm text-primary-foreground/60">
-          © {new Date().getFullYear()} Motion Technology Autoparts Trading. All Rights Reserved.
+          © {new Date().getFullYear()} Motion Technology Autoparts Trading FZE. All Rights Reserved.
         </p>
         <div className="flex gap-4 text-sm text-primary-foreground/60">
           <Link to="/privacy-policy" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link>
