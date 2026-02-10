@@ -1,11 +1,16 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import brandNachi from "@/assets/brand-nachi.png";
+import brandKoyo from "@/assets/brand-koyo.png";
+import brandNtn from "@/assets/brand-ntn.jpg";
+import brandThk from "@/assets/brand-thk.png";
+import brandNfc from "@/assets/brand-nfc.png";
 
 const brands = [
-  { name: "NACHI", origin: "Japan" },
-  { name: "KOYO", origin: "Japan" },
-  { name: "NTN", origin: "Japan" },
-  { name: "THK", origin: "Japan" },
-  { name: "NFC", origin: "China" },
+  { name: "NACHI", origin: "Japan", logo: brandNachi },
+  { name: "KOYO", origin: "Japan", logo: brandKoyo },
+  { name: "NTN", origin: "Japan", logo: brandNtn },
+  { name: "THK", origin: "Japan", logo: brandThk },
+  { name: "NFC", origin: "China", logo: brandNfc },
 ];
 
 const BrandsSection = () => {
@@ -25,9 +30,9 @@ const BrandsSection = () => {
           {brands.map((b) => (
             <div
               key={b.name}
-              className="flex flex-col items-center justify-center p-8 rounded-lg border bg-secondary hover:shadow-md transition-shadow"
+              className="flex flex-col items-center justify-center p-8 rounded-lg border bg-white hover:shadow-md transition-shadow"
             >
-              <span className="text-2xl font-bold text-primary mb-2">{b.name}</span>
+              <img src={b.logo} alt={`${b.name} logo`} className="h-12 object-contain mb-3" />
               <span className="text-xs text-muted-foreground">{b.origin}</span>
             </div>
           ))}
