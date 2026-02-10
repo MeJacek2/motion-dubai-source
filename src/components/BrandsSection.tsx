@@ -32,7 +32,9 @@ const BrandsSection = () => {
               key={b.name}
               className="flex flex-col items-center justify-center p-8 rounded-lg border bg-white hover:shadow-md transition-shadow"
             >
-              <img src={b.logo} alt={`${b.name} logo`} className="h-12 object-contain mb-3" />
+              <div className="h-16 w-32 flex items-center justify-center mb-3">
+                <img src={b.logo} alt={`${b.name} logo`} className="max-h-full max-w-full object-contain" />
+              </div>
               <span className="text-xs text-muted-foreground">{b.origin}</span>
             </div>
           ))}
