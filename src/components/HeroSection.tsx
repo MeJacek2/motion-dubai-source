@@ -34,7 +34,7 @@ const HeroSection = () => (
             asChild
             size="lg"
             variant="outline"
-            className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8"
+            className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8"
           >
             <a href="#contact">Contact Sales</a>
           </Button>
