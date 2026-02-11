@@ -33,6 +33,7 @@ const ContactSection = () => {
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
                 <div className="text-muted-foreground">
+                  <p>info@motiontechparts.com</p>
                   <p>sales01@motiontechparts.com</p>
                   <p>sales02@motiontechparts.com</p>
                   <p>sales03@motiontechparts.com</p>
