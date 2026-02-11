@@ -1,47 +1,12 @@
-import { useState } from "react";
 import { Mail, Phone, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", company: "", phone: "", message: "", website: "" });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const ref = useScrollReveal();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      const res = await fetch("https://api.motiontechparts.com/contact.php", {
-        method: "POST",
-
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          company: form.company,
-          phone: form.phone,
-          message: form.message,
-          website: form.website,
-        }),
-      });
-      const data = await res.json();
-      if (!data.ok) throw new Error(data.error || "Failed");
-      toast({ title: "Message Sent", description: "Thank you! We'll get back to you shortly." });
-      setForm({ name: "", email: "", company: "", phone: "", message: "", website: "" });
-    } catch (error: any) {
-      toast({
-        title: "Error",
-        description: error.message || "Something went wrong. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <section id="contact" className="py-20 bg-background">
@@ -76,53 +41,26 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <Input
-              placeholder="Your Name"
-              value={form.name}
-              onChange={(e) => setForm({ ...form, name: e.target.value })}
-              required
-            />
-            <Input
-              type="email"
-              placeholder="Email Address"
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              required
-            />
-            <Input
-              placeholder="Company"
-              value={form.company}
-              onChange={(e) => setForm({ ...form, company: e.target.value })}
-            />
-            <Input
-              placeholder="Phone Number"
-              value={form.phone}
-              onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            />
-            <Textarea
-              placeholder="Your Message"
-              rows={5}
-              value={form.message}
-              onChange={(e) => setForm({ ...form, message: e.target.value })}
-              required
-            />
+          <form action="https://api.motiontechparts.com/contact.php" method="POST" className="space-y-4">
+            <Input name="name" placeholder="Your Name" required />
+            <Input name="email" type="email" placeholder="Email Address" required />
+            <Input name="company" placeholder="Company" />
+            <Input name="phone" placeholder="Phone Number" />
+            <Textarea name="message" placeholder="Your Message" rows={5} required />
             <input
               type="text"
               name="website"
               style={{ display: "none" }}
               tabIndex={-1}
               autoComplete="off"
-              value={form.website}
-              onChange={(e) => setForm({ ...form, website: e.target.value })}
             />
+            <input type="hidden" name="redirect" value="https://motiontechparts.com/thank-you" />
             <Button
               type="submit"
               size="lg"
               className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
-              disabled={isSubmitting}
             >
-              {isSubmitting ? "Sending..." : "Send Message"}
+              Send Message
             </Button>
           </form>
         </div>
