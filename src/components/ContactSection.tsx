@@ -54,7 +54,7 @@ const ContactSection = () => {
               tabIndex={-1}
               autoComplete="off"
             />
-            <input type="hidden" name="redirect" value="https://motiontechparts.com/thank-you" />
+            <input type="hidden" name="redirect" value="https://motiontechparts.com/" />
             <Button
               type="submit"
               size="lg"
