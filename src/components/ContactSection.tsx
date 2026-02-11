@@ -18,7 +18,7 @@ const ContactSection = () => {
     try {
       const res = await fetch("https://api.motiontechparts.com/contact.php", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+
         body: JSON.stringify({
           name: form.name,
           email: form.email,
@@ -33,7 +33,11 @@ const ContactSection = () => {
       toast({ title: "Message Sent", description: "Thank you! We'll get back to you shortly." });
       setForm({ name: "", email: "", company: "", phone: "", message: "", website: "" });
     } catch (error: any) {
-      toast({ title: "Error", description: error.message || "Something went wrong. Please try again.", variant: "destructive" });
+      toast({
+        title: "Error",
+        description: error.message || "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
