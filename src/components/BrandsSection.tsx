@@ -1,16 +1,16 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import brandNachi from "@/assets/brand-nachi.png";
 import brandKoyo from "@/assets/brand-koyo.png";
-import brandNtn from "@/assets/brand-ntn.jpg";
+import brandNtn from "@/assets/brand-ntn.png";
 import brandThk from "@/assets/brand-thk.png";
-import brandNfc from "@/assets/brand-nfc.png";
+import brandIko from "@/assets/brand-iko.png";
 
 const brands = [
   { name: "NACHI", origin: "Japan", logo: brandNachi },
   { name: "KOYO", origin: "Japan", logo: brandKoyo },
   { name: "NTN", origin: "Japan", logo: brandNtn },
   { name: "THK", origin: "Japan", logo: brandThk },
-  { name: "NFC", origin: "China", logo: brandNfc },
+  { name: "IKO", origin: "Japan", logo: brandIko },
 ];
 
 const BrandsSection = () => {
