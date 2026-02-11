@@ -8,13 +8,35 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const ContactSection = () => {
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", company: "", phone: "", message: "", website: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const ref = useScrollReveal();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Message Sent", description: "Thank you! We'll get back to you shortly." });
-    setForm({ name: "", email: "", phone: "", message: "" });
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("https://api.motiontechparts.com/contact.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          phone: form.phone,
+          message: form.message,
+          website: form.website,
+        }),
+      });
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.error || "Failed");
+      toast({ title: "Message Sent", description: "Thank you! We'll get back to you shortly." });
+      setForm({ name: "", email: "", company: "", phone: "", message: "", website: "" });
+    } catch (error: any) {
+      toast({ title: "Error", description: error.message || "Something went wrong. Please try again.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -65,6 +87,11 @@ const ContactSection = () => {
               required
             />
             <Input
+              placeholder="Company"
+              value={form.company}
+              onChange={(e) => setForm({ ...form, company: e.target.value })}
+            />
+            <Input
               placeholder="Phone Number"
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -76,12 +103,22 @@ const ContactSection = () => {
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               required
             />
+            <input
+              type="text"
+              name="website"
+              style={{ display: "none" }}
+              tabIndex={-1}
+              autoComplete="off"
+              value={form.website}
+              onChange={(e) => setForm({ ...form, website: e.target.value })}
+            />
             <Button
               type="submit"
               size="lg"
               className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+              disabled={isSubmitting}
             >
-              Send Message
+              {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </div>
