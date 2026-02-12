@@ -7,7 +7,6 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const ContactSection = () => {
   const ref = useScrollReveal();
 
-
   return (
     <section id="contact" className="py-20 bg-background">
       <div ref={ref} className="container mx-auto px-4 opacity-0">
@@ -25,9 +24,6 @@ const ContactSection = () => {
                 <Mail className="w-5 h-5 text-accent shrink-0" />
                 <div className="text-muted-foreground">
                   <p>info@motiontechparts.com</p>
-                  <p>sales01@motiontechparts.com</p>
-                  <p>sales02@motiontechparts.com</p>
-                  <p>sales03@motiontechparts.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -47,13 +43,7 @@ const ContactSection = () => {
             <Input name="company" placeholder="Company" />
             <Input name="phone" placeholder="Phone Number" />
             <Textarea name="message" placeholder="Your Message" rows={5} required />
-            <input
-              type="text"
-              name="website"
-              style={{ display: "none" }}
-              tabIndex={-1}
-              autoComplete="off"
-            />
+            <input type="text" name="website" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
             <input type="hidden" name="redirect" value="https://motiontechparts.com/" />
             <Button
               type="submit"
