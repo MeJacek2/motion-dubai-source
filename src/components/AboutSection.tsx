@@ -2,7 +2,7 @@ import { Building2, ShieldCheck, Globe, Users } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const features = [
-  { icon: Building2, title: "JAFZA - Dubai Based", desc: "Trading company operating from Dubai's strategic hub" },
+  { icon: Building2, title: "Established Presence", desc: "Trading company with a strong global footprint" },
   { icon: ShieldCheck, title: "Quality & Authenticity", desc: "Focus on genuine, high-quality components" },
   { icon: Globe, title: "Global Sourcing", desc: "Partnerships with manufacturers across Japan & China" },
   { icon: Users, title: "B2B Built", desc: "Designed for trade, industrial & distribution customers" },
@@ -18,7 +18,7 @@ const AboutSection = () => {
           About Motion Technology
         </h2>
         <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-lg">
-          Motion Technology Autoparts Trading is a UAE-based company specializing in the supply of precision bearings, linear motion components, and automotive parts for industrial and aftermarket applications. We work closely with trusted manufacturers from Japan and China to deliver reliable, genuine products that meet the technical and commercial requirements of our customers.
+          Motion Technology Autoparts Trading specializes in the supply of precision bearings, linear motion components, and automotive parts for industrial and aftermarket applications. We work closely with trusted manufacturers from Japan and China to deliver reliable, genuine products that meet the technical and commercial requirements of our customers.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
