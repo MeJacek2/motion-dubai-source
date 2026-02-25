@@ -1,4 +1,4 @@
-import { Mail, Phone, Clock } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -25,11 +25,7 @@ const ContactSection = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent" />
-                <span className="text-muted-foreground">M: +971 50 7642014</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-accent" />
-                <span className="text-muted-foreground">Mon – Fri | 9:00 AM – 6:00 PM</span>
+                <span className="text-muted-foreground">Contact us via email</span>
               </div>
             </div>
           </div>
