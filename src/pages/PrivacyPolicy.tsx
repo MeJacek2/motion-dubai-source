@@ -12,7 +12,7 @@ const PrivacyPolicy = () => (
         <div className="prose prose-gray max-w-none space-y-6 text-foreground/80">
           <section>
             <h2 className="text-xl font-semibold text-primary mt-8 mb-3">1. Introduction</h2>
-            <p>Motion Technology Autoparts Trading ("we", "us", or "our"), registered in Jebel Ali Free Zone Authority (JAFZA), Dubai, United Arab Emirates, is committed to protecting your personal information and your right to privacy. This Privacy Policy explains what information we collect, how we use it, and what rights you have in relation to it.</p>
+            <p>Motion Technology Autoparts Trading ("we", "us", or "our") is committed to protecting your personal information and your right to privacy. This Privacy Policy explains what information we collect, how we use it, and what rights you have in relation to it.</p>
           </section>
 
           <section>
@@ -33,13 +33,13 @@ const PrivacyPolicy = () => (
               <li>To process and fulfill orders for bearings, linear motion systems, and automotive parts.</li>
               <li>To send you relevant product information and updates with your consent.</li>
               <li>To improve our website, products, and services.</li>
-              <li>To comply with legal obligations under UAE law.</li>
+              <li>To comply with applicable legal obligations.</li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold text-primary mt-8 mb-3">4. Data Sharing & Disclosure</h2>
-            <p>We do not sell, trade, or rent your personal information to third parties. We may share your information with trusted partners and service providers who assist us in operating our business, provided they agree to keep this information confidential. We may also disclose information when required by UAE law or to protect our legal rights.</p>
+            <p>We do not sell, trade, or rent your personal information to third parties. We may share your information with trusted partners and service providers who assist us in operating our business, provided they agree to keep this information confidential. We may also disclose information when required by applicable law or to protect our legal rights.</p>
           </section>
 
           <section>
@@ -62,10 +62,7 @@ const PrivacyPolicy = () => (
             <p>If you have questions about this Privacy Policy, please contact us at:</p>
             <p className="mt-2">
               <strong>Motion Technology Autoparts Trading</strong><br />
-              FC0401WS84, Jebel Ali Free Zone Authority (JAFZA)<br />
-              Dubai, United Arab Emirates<br />
-              Email: sales01@motiontechparts.com<br />
-              Phone: +971 50 7642014
+              Email: sales01@motiontechparts.com
             </p>
           </section>
         </div>

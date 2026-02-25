@@ -14,10 +14,7 @@ const ContactSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div>
-            <h3 className="text-xl font-semibold text-primary mb-6">Motion Technology Autoparts Trading FZE</h3>
-            <p className="text-muted-foreground mb-1">FC0401WS84,</p>
-            <p className="text-muted-foreground mb-1">Jebel Ali Free Zone Authority (JAFZA)</p>
-            <p className="text-muted-foreground mb-6">Dubai, United Arab Emirates</p>
+            <h3 className="text-xl font-semibold text-primary mb-6">Motion Technology Autoparts Trading</h3>
 
             <div className="space-y-4">
               <div className="flex items-center gap-3">

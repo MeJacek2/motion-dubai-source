@@ -12,7 +12,7 @@ const TermsAndConditions = () => (
         <div className="prose prose-gray max-w-none space-y-6 text-foreground/80">
           <section>
             <h2 className="text-xl font-semibold text-primary mt-8 mb-3">1. General</h2>
-            <p>These Terms and Conditions govern your use of the website operated by Motion Technology Autoparts Trading ("the Company"), registered in Jebel Ali Free Zone Authority (JAFZA), Dubai, United Arab Emirates. By accessing and using this website, you accept and agree to be bound by these terms.</p>
+            <p>These Terms and Conditions govern your use of the website operated by Motion Technology Autoparts Trading ("the Company"). By accessing and using this website, you accept and agree to be bound by these terms.</p>
           </section>
 
           <section>
@@ -37,7 +37,7 @@ const TermsAndConditions = () => (
 
           <section>
             <h2 className="text-xl font-semibold text-primary mt-8 mb-3">5. Limitation of Liability</h2>
-            <p>To the fullest extent permitted by UAE law, Motion Technology Autoparts Trading shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our products or services. Our total liability shall not exceed the value of the products or services purchased.</p>
+            <p>To the fullest extent permitted by applicable law, Motion Technology Autoparts Trading shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our products or services. Our total liability shall not exceed the value of the products or services purchased.</p>
           </section>
 
           <section>
@@ -47,7 +47,7 @@ const TermsAndConditions = () => (
 
           <section>
             <h2 className="text-xl font-semibold text-primary mt-8 mb-3">7. Governing Law</h2>
-            <p>These Terms and Conditions shall be governed by and construed in accordance with the laws of the United Arab Emirates. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts of Dubai, UAE.</p>
+            <p>These Terms and Conditions shall be governed by and construed in accordance with applicable laws. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the competent courts.</p>
           </section>
 
           <section>
@@ -60,10 +60,7 @@ const TermsAndConditions = () => (
             <p>For questions regarding these Terms and Conditions, please contact us at:</p>
             <p className="mt-2">
               <strong>Motion Technology Autoparts Trading</strong><br />
-              FC0401WS84, Jebel Ali Free Zone Authority (JAFZA)<br />
-              Dubai, United Arab Emirates<br />
-              Email: sales01@motiontechparts.com<br />
-              Phone: +971 50 7642014
+              Email: sales01@motiontechparts.com
             </p>
           </section>
         </div>
