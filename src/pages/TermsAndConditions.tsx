@@ -60,7 +60,7 @@ const TermsAndConditions = () => (
             <p>For questions regarding these Terms and Conditions, please contact us at:</p>
             <p className="mt-2">
               <strong>Motion Technology Autoparts Trading</strong><br />
-              Email: sales01@motiontechparts.com
+              Email: info@motiontechparts.com
             </p>
           </section>
         </div>
